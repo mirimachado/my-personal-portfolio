@@ -1,0 +1,37 @@
+/* src/styles/hero.css */
+.hero {
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1500x1000'); /* Substitua pela sua imagem */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #e6733b;
+  }
+  

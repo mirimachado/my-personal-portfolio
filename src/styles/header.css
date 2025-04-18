@@ -1,0 +1,36 @@
+/* src/styles/header.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(24, 144, 160, 0.9);
+  padding: 15px;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav a, h1 {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #948d8a;
+}
