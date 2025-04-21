@@ -6,7 +6,7 @@ function Header() {
     
     <header className="header">
       <div className="container">
-        <h1>Bem-vindo ao Meu Serviço</h1>
+        <p className='f-title-home'>Bem-vindo ao Meu Serviço</p>
         <nav className="nav">
           <a href="#service">Serviços</a>
           <a href="#about">Sobre</a>

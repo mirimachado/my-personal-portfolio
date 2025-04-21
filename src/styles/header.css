@@ -1,11 +1,33 @@
 /* src/styles/header.css */
+
+::-webkit-scrollbar {
+  width: 4px; 
+  height: 4px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+}
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
+
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(24, 144, 160, 0.9);
-  padding: 15px;
+  background-color: #121313;
+  padding: 10px;
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -19,16 +41,47 @@
 }
 
 
-.nav a, h1 {
+.nav a {
+  position: relative;
   text-decoration: none;
   color: #ffffff;
+  font-family: poppins, sans-serif;
   margin-left: 20px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  padding-bottom: 5px;
 }
 
-h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* A linha escondida inicialmente */
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Efeito no hover: a linha cresce da esquerda pra direita */
+.nav a:hover::after {
+  width: 100%;
+}
+
+
+.f-title-home {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: poppins, sans-serif;
+  margin-left: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+p {
+
+  font-size: 0.9rem;
+  
 }
 
 .nav a:hover {
