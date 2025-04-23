@@ -1,42 +1,82 @@
-.values-container {
-    padding: 50px;
-    background-color: #f4f4f4;
-    text-align: center;
-  }
-  
-  .values h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .values {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-  }
-  
-  .value-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-  }
-  
-  .value-item h3 {
-    font-size: 1.5rem;
-    color: #0056b3;
-    margin-bottom: 15px;
-  }
-  
-  .value-item ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .value-item li {
-    font-size: 1rem;
-    color: #333;
-  }
-  
+.valores-area {
+  padding: 100px 20px;
+  background: #f8fafc;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.valores-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #0f172a;
+}
+
+.valores-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bloco-info {
+  background: #ffffff;
+  width: 300px;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.bloco-info:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+.icone-info {
+  background-color: #e2e8f0;
+  color: #3b82f6;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.bloco-info h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.bloco-info p,
+.bloco-info li {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.bloco-info ul {
+  padding-left: 20px;
+  list-style: disc;
+  margin-top: 10px;
+}
+
+/* Opcional: Estilo de fundo sutil animado como o Mollie usa */
+.valores-area::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #93c5fd 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}

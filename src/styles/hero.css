@@ -1,5 +1,10 @@
 /* src/styles/hero.css */
 
+body, html{
+  overflow-x: hidden;
+  margin: 0;
+}
+
 .hero-div {
   width: 100%;
   height: 800px;
@@ -10,6 +15,8 @@
   animation: gradientMove 10s ease infinite;
   overflow: hidden;
   position: relative;
+
+  
 }
 
 @keyframes gradientMove {
@@ -50,10 +57,10 @@
     position: absolute;
     left: 50%;
     top: 516px;
-    transform: translate(-125%, -50%);
-    width: 400px;
-    height: 20px;
-    background: radial-gradient(ellipse at center, #00000063 0%, transparent 80%);
+    transform: translate(-113%, -50%);
+    width: 500px;
+    height: 80px;
+    background: radial-gradient(ellipse at center, #1f0d426b 0%, transparent 70%);
     filter: blur(2px);
     z-index: 1;
   }

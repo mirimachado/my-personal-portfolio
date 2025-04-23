@@ -1,26 +1,39 @@
 .services {
   width: 100%;
   padding: 100px 20px;
-  background: linear-gradient(135deg, #f9fafb, #e8edf2);
+  background: #f9f9f9;
   font-family: 'Poppins', sans-serif;
 }
 
 .services-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 10px;
-  color: #333;
+  color: #1f1f1f;
+  margin-bottom: 16px;
 }
 
 .services-subtitle {
   text-align: center;
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 60px;
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 10px;
+  font-weight: 400;
+}
+
+.services-description {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
 }
 
 .container-services-blocks {
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
@@ -28,40 +41,63 @@
 }
 
 .block-service {
-  width: 350px;
-  height: auto;
+  width: 360px;
   background-color: white;
-  border-radius: 20px;
-  border: 1px solid #dfdfdf;
-  padding: 30px 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  padding: 40px 28px;
   text-align: center;
-  color: #444444;
-  font-weight: 300;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .block-service:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
 }
 
 .icon-service {
-  background-color: #a2dde7;
+  background-color: #e4f0f3;
   border-radius: 50%;
-  padding: 20px;
-  margin-bottom: 20px;
-  display: flex;
+  padding: 22px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.block-service:hover .icon-service {
+  transform: scale(1.1);
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
-  stroke: #4a4a4a;
+  width: 36px;
+  height: 36px;
+  stroke: #298f92;
+}
+
+.block-service h3 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.block-service p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .block-service {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .block-service {
+    width: 90%;
+  }
 }

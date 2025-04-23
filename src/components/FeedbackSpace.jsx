@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/feedback-space.css';
 import techlinkerLogo from '../assets/icons/figma.png';
-import miliLogo from '../assets/icons/figma.png'; // Pode trocar se tiver outro logo
+import miliLogo from '../assets/icons/figma.png';
 
 const testimonials = [
   {
-    quote: '“Ficou muito bom mesmo, gostei bastante das cores e do formato limpo para navegação. Ficou show sim. Gostamos bastante.”',
+    quote: '“Ficou muito bom mesmo, gostei bastante das cores e do formato limpo para navegação. Ficou show, gostamos bastante.”',
     name: 'Rafael Caldas',
     company: 'TechLinker',
     logo: techlinkerLogo,
@@ -23,29 +23,33 @@ function FeedBackSpace() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % testimonials.length);
-    }, 5000); // troca a cada 5 segundos
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="feedback-section">
+    <section className="feedback-section">
       <div className="feedback-container">
         <h2 className="feedback-title">O que dizem sobre meu trabalho</h2>
         <p className="feedback-subtitle">
-          Cada projeto é feito com muito cuidado, atenção aos detalhes e foco nos resultados.
+          Cada projeto é feito com muito cuidado, atenção aos detalhes e foco em resultados reais.
         </p>
 
         <div className="carousel-wrapper">
           {testimonials.map((testimonial, index) => (
             <div
-              className={`testimonial-box testimonial-slide ${index === currentIndex ? 'active' : ''}`}
+              className={`testimonial-box ${index === currentIndex ? 'active' : ''}`}
               key={index}
             >
               <p className="testimonial-quote">{testimonial.quote}</p>
               <div className="testimonial-footer">
-                <img src={testimonial.logo} alt={`Logo da ${testimonial.company}`} className="company-logo" />
+                <img
+                  src={testimonial.logo}
+                  alt={`Logo da ${testimonial.company}`}
+                  className="company-logo"
+                />
                 <div>
                   <p className="testimonial-client-name">{testimonial.name}</p>
                   <p className="testimonial-company">{testimonial.company}</p>
@@ -55,7 +59,21 @@ function FeedBackSpace() {
           ))}
         </div>
       </div>
-    </div>
+
+      {/* Bolinhas flutuantes */}
+      <div className="floating-shape shape-1">
+        <i className="fa fa-lightbulb"></i>
+      </div>
+      <div className="floating-shape shape-2">
+        <i className="fas fa-laptop"></i>
+      </div>
+      <div className="floating-shape shape-3">
+        <i className="fas fa-star"></i>
+      </div>
+      <div className="floating-shape shape-4">
+        <i className="fas fa-comments"></i>
+      </div>
+    </section>
   );
 }
 

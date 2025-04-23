@@ -1,32 +1,106 @@
-/* .cta-container {
-    text-align: center;
-    background-color: #0056b3;
-    color: white;
-    padding: 50px;
-  }
-  
-  .cta-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .cta-container p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  } */
-  
-  /* .cta-button {
-    background-color: #ff9900;
-    color: white;
-    font-size: 1.1rem;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #cc7a00;
-  }
-   */
+.custom-cta-section {
+  background: #e5dffe; /* fundo lilás */
+  padding: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-floating-container {
+  background: #3f38c465; /* leve transparência */
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-tag {
+  background: #6c63ff;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  border: none;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.cta-title {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.cta-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-form input {
+  padding: 0.9rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  min-width: 220px;
+  /* background: transparent; */
+  color: white;
+  text-decoration: none;
+}
+
+.cta-form input::placeholder {
+  color: #ddd;
+}
+
+.cta-submit {
+  background: #fd7e50;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cta-submit:hover {
+  transform: translateY(-3px);
+}
+
+/* Floating shapes */
+.floating-shape-c {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.floating-shape-c.shape-1-2 {
+  width: 120px;
+  height: 120px;
+  background-color: #fddde6;
+  top: -40px;
+  left: -30px;
+}
+
+.floating-shape-c.shape-2-3 {
+  width: 180px;
+  height: 180px;
+  background-color: #c5bfff;
+  bottom: -40px;
+  right: 40px;
+}
+
+.floating-shape-c.shape-3-4 {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  top: 10px;
+  right: 100px;
+  opacity: 0.2;
+}

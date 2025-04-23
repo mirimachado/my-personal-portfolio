@@ -9,7 +9,7 @@ function Footer() {
         <div className="footer-column">
           <h3>Sobre</h3>
           <p>
-            Desenvolvedor focado em criar soluções digitais como landing pages, micro SaaS, sistemas pequenos e MVPs personalizados para atender às necessidades específicas de cada cliente.
+            Desenvolvedora focada em criar soluções digitais como landing pages, micro SaaS, sistemas pequenos e MVPs personalizados para atender às necessidades específicas de cada cliente.
           </p>
         </div>
 
@@ -27,8 +27,8 @@ function Footer() {
         {/* Coluna 3: Contato */}
         <div className="footer-column">
           <h3>Contato</h3>
-          <p>Email: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
-          <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">(11) 99999-9999</a></p>
+          <p>Email: <a href="mailto:seuemail@exemplo.com">miria.machado.dev@gmail.com</a></p>
+          <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">(51) 99766-5096</a></p>
         </div>
 
         {/* Coluna 4: Redes Sociais */}
@@ -44,7 +44,7 @@ function Footer() {
 
       {/* Linha de direitos autorais */}
       <div className="footer-bottom">
-        <p>&copy; 2025 - Todos os direitos reservados | Desenvolvido por Seu Nome</p>
+        <p>&copy; 2025 - Todos os direitos reservados | Desenvolvido por Miriã Machado</p>
       </div>
     </footer>
   );
