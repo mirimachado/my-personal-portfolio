@@ -7,6 +7,7 @@
     color: #fff;
     position: relative;
     overflow: hidden;
+    
 }
 
 /* Floating Blobs - Blobs ondulados */
@@ -494,11 +495,11 @@
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .creative-showcase-container {
+  /* .creative-showcase-container {
     flex-direction: column;
     gap: 3rem;
     padding: 4rem 1rem;
-  }
+  } */
 
   .main-person-image img {
     width: 250px;
@@ -517,17 +518,17 @@
   }
 }
 
-.creative-showcase-container {
+/* .creative-showcase-container {
   display: flex;
-  align-items: flex-start; /* Alinha no topo */
-  justify-content: space-between; /* Espaço entre os itens */
-  gap: 2rem; /* Espaço entre os itens */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
   padding: 4rem 2rem;
   background-color: #eaf5ee;
   border-radius: 2rem;
   margin-top: 4rem;
-  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-}
+  flex-wrap: wrap; 
+} */
 
 .creative-right {
   max-width: 45%; /* Define a largura máxima para garantir que fiquem lado a lado */
@@ -545,7 +546,7 @@
   }
 }
 
-
+/* 
 .creative-showcase-container {
   display: flex;
   align-items: center;
@@ -556,20 +557,154 @@
   border-radius: 2rem;
   margin-top: 4rem;
   width: 100%; 
-}
+} */
 
+/* aqui */
+/* 
 .creative-showcase-container {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  justify-content: center; 
   gap: 2rem;
   padding: 2rem;
   background-color: #eaf5ee;
   border-radius: 2rem;
   margin-top: 4rem;
   width: 100%;
-  height: 70vh;  /* Faz o contêiner ocupar toda a altura da tela */
-  box-sizing: border-box; /* Inclui o padding no cálculo da largura e altura */
+  height: 70vh; 
+  box-sizing: border-box; 
+} */
+
+
+
+/* Container dos cards */
+/* .creative-showcase-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #eaf5ee;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+} */
+
+/* Estilo comum dos cards */
+.faq-item {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  width: 300px; /* largura fixa */
+  position: relative;
 }
+
+/* Label no topo */
+.faq-item .creative-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Título */
+.faq-question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+.faq-answer {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Link seta no FAQ 1 */
+.card-link {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #888888;
+  cursor: pointer;
+}
+
+/* Botão no card 2 */
+.creative-cta-button {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: #fd7e50;
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.creative-cta-button:hover {
+  background: #e55e3c;
+}
+
+/* Blobs de fundo (repita ou ajuste conforme já tiver) */
+.creative-showcase-container::before,
+.creative-showcase-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  background: #4fb85b;
+}
+
+.creative-showcase-container::before {
+  width: 300px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.creative-showcase-container::after {
+  width: 250px;
+  height: 250px;
+  bottom: -70px;
+  right: -60px;
+}
+
+/* Responsivo */
+/* @media (max-width: 768px) {
+  .creative-showcase-container {
+    flex-direction: column;
+    align-items: center;
+  }
+} */
+
+
+
+
+/* Para a seção FAQ preencher 100% */
+/* .info-cards-section,
+.creative-showcase-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+} */
+
 
 

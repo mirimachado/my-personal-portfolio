@@ -1,0 +1,352 @@
+:root {
+  --color-bg-hero: #a9d0f645;
+  --color-shape-1: #1283a5;
+  --color-shape-2: #1283a5;
+  --color-card-bg: rgba(160, 190, 220, 0.25);
+  --color-text-title: #102a43;
+  --color-text-body: #334e68;
+  --font-base: 'Poppins', sans-serif;
+}
+
+body, input, button, textarea {
+  font-family: var(--font-base);
+}
+
+/* Hero “Sobre” */
+.about-hero {
+  position: relative;
+  background: var(--color-bg-hero);
+  padding: 6rem 1rem;
+  overflow: hidden;
+}
+
+.about-shapes::before,
+.about-shapes::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 4;
+
+}
+
+.about-shapes::before {
+  width: 200px;
+  height: 200px;
+  background: var(--color-shape-1);
+  top: -50px;
+  left: -50px;
+  animation: move1 10s linear infinite;
+  z-index: 4;
+}
+
+.about-shapes::after {
+  width: 300px;
+  height: 300px;
+  background: var(--color-shape-2);
+  bottom: -80px;
+  right: -80px;
+  animation: move2 12s linear infinite;
+}
+
+@keyframes move1 {
+  from { transform: translate(0,0); }
+  to   { transform: translate(20px,20px); }
+}
+
+@keyframes move2 {
+  from { transform: translate(0,0); }
+  to   { transform: translate(-20px,-20px); }
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha tudo à esquerda */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  gap: 10rem; /* Espaçamento entre texto e imagem */
+}
+
+.about-text {
+  flex: 1;               /* Ocupa o espaço disponível */
+  max-width: 400px;      /* Limita largura do texto */
+  text-align: left;      /* Alinha o texto à esquerda */
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg,#6c63ff,#00dbde);
+  margin: 1rem 0 2rem 0;  /* Ajusta margens para manter alinhamento */
+  animation: slide 2s infinite alternate;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-5px); }
+}
+
+.about-text p {
+  font-size: 1.25rem;
+  color: var(--color-text-body);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background: #afd3de;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Blob + imagem */
+.about-image {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  flex: 0 0 auto;
+  margin-left: 4rem;
+}
+
+.blob-photo {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* Seção de cards */
+.about-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4rem 1rem;
+  background: white;
+}
+
+.card {
+  background: var(--color-card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.card-icon {
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-title);
+}
+
+.card ul {
+  text-align: left;
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.card ul li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+
+/* Seção de cards (igual ao estilo de .bloco-info) */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;           /* mesmo gap do primeiro */
+  padding: 4rem 1rem;
+  background: #f8fafc;  /* fundo suave */
+}
+
+.about-cards .card {
+  background: #ffffff; 
+  width: 300px;         /* mesma largura de .bloco-info */
+  padding: 40px 30px;   /* mesma área interna */
+  border-radius: 24px;  /* bordas arredondadas iguais */
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.05); /* mesma sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;     /* texto à esquerda */
+}
+
+.about-cards .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+.about-cards .card-icon {
+  background-color: #e2e8f0;
+  color: #78b0ba;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+}
+
+.about-cards .card h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.about-cards .card p,
+.about-cards .card li {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-cards .card ul {
+  padding-left: 20px;
+  list-style: disc;
+  margin-top: 10px;
+}
+/* Header para a seção de cards */
+.about-cards-header {
+  text-align: center;
+  margin: 0 auto 2rem auto;  /* espaço abaixo antes dos cards */
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.cards-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 0.5rem;
+}
+
+.cards-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-body);
+  margin-bottom: 1.5rem;
+}
+/* Ajuste do container do header */
+.about-cards-header {
+  margin-bottom: 0.5rem;  /* reduz bem o espaçamento */
+}
+
+/* Título e subtítulo */
+.cards-title {
+  margin-bottom: 0.25rem;
+}
+.cards-subtitle {
+  margin-bottom: 0;       /* sem margin, para colar nos cards */
+}
+
+/* Ajuste no padding superior da seção de cards */
+.about-cards {
+  padding-top: 0.5rem;    /* diminui o padding entre header e cards */
+  padding-bottom: 4rem;   /* mantém espaço abaixo */
+}
+
+
+/* Ajustes responsivos para telas menores */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column-reverse; /* imagem abaixo do texto */
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-image {
+    margin-left: 0;
+    width: 80%;     /* ocupa 80% da largura */
+    max-width: 400px;
+    height: auto;   /* deixa altura automática */
+  }
+  .blob-photo {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .about-text, .about-image {
+    max-width: 800px;
+    text-align: center; /* centraliza em mobile */
+  }
+}
+
+/* Para telas bem pequenas (mobile) */
+@media (max-width: 576px) {
+  .about-hero {
+    padding: 3rem 1rem;
+  }
+  .about-text h1 {
+    font-size: 2rem;
+  }
+  .about-text p {
+    font-size: 1.125rem;
+  }
+  .about-cards {
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+  .about-cards .card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .about-text, .about-image {
+    max-width: 500px;
+    text-align: center; /* centraliza em mobile */
+  }
+
+  .about-image {
+    margin-top: 130px;
+    margin-left: 0;
+    width: 80%;     /* ocupa 80% da largura */
+    max-width: 400px;
+    height: auto;   /* deixa altura automática */
+  }
+}
+
+
+
+/* Em mobile, text-align center já aplicado, então divider fica central */
+@media (max-width: 992px) {
+  .about-text {
+    text-align: center;
+  }
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg,#6c63ff,#00dbde);
+    margin: 1rem auto 2rem auto; /* top right bottom left */
+    animation: slide 1s infinite alternate;
+  }
+}

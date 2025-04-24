@@ -1,7 +1,7 @@
 /* Estilo para a seção de feedback */
 .feedback-section {
   background-color: #ffffff;
-  background: linear-gradient(135deg, #f0f4ff, #eaf5ee);
+  /* background: linear-gradient(135deg, #f0f4ff, #eaf5ee); */
 
   padding: 6rem 2rem;
   display: flex;
@@ -23,7 +23,7 @@
 /* Título do feedback */
 .feedback-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #111827;
   margin-bottom: 1rem;
@@ -48,7 +48,7 @@
 
 /* Caixa de depoimentos */
 .testimonial-box {
-  background-color: #f9fafb;
+  background-color: #ffffff;
   border: 1px solid #ccd6e9;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   padding: 2.5rem 2rem;
@@ -61,6 +61,7 @@
   transition: opacity 0.4s ease, transform 0.4s ease;
   opacity: 0;
   transform: translateY(20px);
+  z-index: 5;
 }
 
 .testimonial-box.active {
@@ -120,19 +121,19 @@
 }
 
 .floating-shape.shape-1 {
-  background-color: #fef08aa7; /* Amarelo suave */
+  background-color: #d5e0f1; /* Amarelo suave */
 }
 
 .floating-shape.shape-2 {
-  background-color: #a7f3d09f; /* Verde suave */
+  background-color: #d5e0f1; /* Verde suave */
 }
 
 .floating-shape.shape-3 {
-  background-color: #ddd6fea1; /* Roxo suave */
+  background-color: #d5e0f1; /* Roxo suave */
 }
 
 .floating-shape.shape-4 {
-  background-color: #f3a7b296; /* Rosa suave */
+  background-color: #d5e0f1; /* Rosa suave */
 }
 
 /* Estilo para os ícones dentro das bolinhas */

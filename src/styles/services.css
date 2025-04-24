@@ -6,11 +6,13 @@
 }
 
 .services-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   text-align: center;
   color: #1f1f1f;
   margin-bottom: 16px;
+  left: 50%;
+  transform: translateX(-2%);
 }
 
 .services-subtitle {
@@ -33,37 +35,42 @@
 
 .container-services-blocks {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .block-service {
-  width: 360px;
-  background-color: white;
-  border: 1px solid #e6e6e6;
-  border-radius: 18px;
-  padding: 40px 28px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  flex: 1 1 360px;
+  max-width: 360px;
+  min-width: 280px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
 }
 
 .block-service:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
 }
 
 .icon-service {
-  background-color: #e4f0f3;
+  background-color: #e2e8f0;
+  color: #88b1f5;
   border-radius: 50%;
-  padding: 22px;
+  padding: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
+  width: 43px;
+  height: 43px;
   transition: transform 0.3s ease;
 }
 
@@ -71,33 +78,68 @@
   transform: scale(1.1);
 }
 
-.icon {
-  width: 36px;
-  height: 36px;
-  stroke: #298f92;
-}
-
 .block-service h3 {
   font-size: 1.25rem;
-  margin-bottom: 16px;
-  font-weight: 600;
-  color: #1f1f1f;
+  color: #0f172a;
+  margin-bottom: 12px;
 }
 
-.block-service p {
+.block-service p,
+.block-service li {
+  color: #475569;
   font-size: 1rem;
-  color: #555;
   line-height: 1.6;
 }
 
+.block-service ul {
+  padding-left: 20px;
+  list-style: disc;
+  margin-top: 10px;
+}
+
+/* Responsividade geral */
 @media (max-width: 1024px) {
-  .block-service {
-    width: 45%;
+  .container-services-blocks {
+    gap: 24px;
   }
 }
 
 @media (max-width: 768px) {
+  .services {
+    padding: 80px 16px;
+  }
+
+  .container-services-blocks {
+    gap: 16px;
+    justify-content: center !important;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .block-service {
-    width: 90%;
+    margin: 0 auto;
+    float: none;
+    width: 90%;        /* garante largura adequada */
+    max-width: 360px;  
   }
 }
+
+
+
+/* 1) overflow-x no body */
+body {
+  overflow-x: hidden;
+}
+
+/* 2) box-sizing global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 3) limitar container e ver borda */
+.container-services-blocks {
+  max-width: 100%;
+ 
+}
+
+

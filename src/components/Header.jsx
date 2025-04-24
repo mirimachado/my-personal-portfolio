@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/header.css';
 import logo from '../assets/icons/medium.png'; // substitua pelo caminho correto da sua logo
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,10 +29,12 @@ function Header() {
         </div>
 
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#service">Serviços</a>
-          <a href="#about">Sobre</a>
-          <a href="#contact">Contato</a>
-          <a href="#blog">Blog</a>
+      
+            <Link to="/" className="mx-4 text-gray-700 hover:underline">Início</Link>
+            <a href="#service">Serviços</a>
+            <Link to="/about" className="mx-4 text-gray-700 hover:underline">Sobre</Link>
+            <Link to="/contact" className="mx-4 text-gray-700 hover:underline">Contato</Link>
+            <a href="#blog">Blog</a>
 
         </nav>
       </div>

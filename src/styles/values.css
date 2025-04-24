@@ -6,7 +6,7 @@
 }
 
 .valores-heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 60px;
   color: #0f172a;
@@ -36,7 +36,7 @@
 
 .icone-info {
   background-color: #e2e8f0;
-  color: #3b82f6;
+  color: #88b1f5;
   border-radius: 50%;
   padding: 12px;
   font-size: 1.5rem;
@@ -44,8 +44,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 43px;
+  height: 43px;
 }
 
 .bloco-info h3 {
