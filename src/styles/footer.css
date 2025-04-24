@@ -59,4 +59,15 @@
     font-size: 0.9rem;
     color: #aaaaaa;
   }
-  
+  /* Logo centralizada no topo do footer */
+.footer-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  width: 100px;       /* ajuste o tamanho conforme necessário */
+  height: auto;
+  border-radius: 50%; /* deixa a imagem redonda */
+  cursor: pointer;
+}

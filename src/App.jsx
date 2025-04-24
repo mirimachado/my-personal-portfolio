@@ -8,6 +8,7 @@ import FeedBackSpace from "./components/FeedbackSpace";
 import Values from "./components/Values";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
+import ScopeExample from "./components/ScopeExample";
 
 
 function App() {
@@ -17,10 +18,12 @@ function App() {
     <Hero />
     <Services />
     <HowItWorks />
+    <ScopeExample/>
     <FeedBackSpace />
     <Values />
     <CallToAction />
     <Footer />
+    
   </div>
   );
 }

@@ -1,35 +1,29 @@
-/* Estilo para a seção de feedback */
+/* Seção de feedback */
 .feedback-section {
-  background-color: #ffffff;
-  /* background: linear-gradient(135deg, #f0f4ff, #eaf5ee); */
-
+  background-color: #f9fafb;
   padding: 6rem 2rem;
   display: flex;
   justify-content: center;
-  position: relative;
-  overflow: hidden;  /* Impede overflow, mas não afeta a caixa de feedback */
 }
 
-/* Container do feedback */
+/* Container interno */
 .feedback-container {
   max-width: 800px;
   width: 100%;
   text-align: center;
   position: relative;
-  z-index: 1;
-  box-sizing: border-box; /* Garante que o padding não cause overflow */
 }
 
-/* Título do feedback */
+/* Título */
 .feedback-title {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #111827;
+  color: #0f1f37;
   margin-bottom: 1rem;
 }
 
-/* Subtítulo do feedback */
+/* Subtítulo */
 .feedback-subtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
@@ -38,71 +32,88 @@
   line-height: 1.7;
 }
 
-/* Wrapper do carrossel */
+/* Carrossel */
 .carousel-wrapper {
   position: relative;
-  overflow: hidden;
-  min-height: 260px;
-  width: 100%; /* Certifica que o carrossel ocupa 100% da largura */
+  min-height: 320px;
 }
 
-/* Caixa de depoimentos */
+/* Caixa de depoimento */
 .testimonial-box {
-  background-color: #ffffff;
-  border: 1px solid #ccd6e9;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  padding: 2.5rem 2rem;
-  border-radius: 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 3rem 2rem 4rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   position: absolute;
-  text-align: left;
-  width: 90%; /* Garante que a caixa ocupe 100% da largura do seu container */
+  width: 100%;
   top: 0;
   left: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
   opacity: 0;
   transform: translateY(20px);
-  z-index: 5;
+  transition: all 0.4s ease;
 }
 
+/* Ativo */
 .testimonial-box.active {
   opacity: 1;
   transform: translateY(0);
+  z-index: 2;
 }
 
+/* Aspas decorativas */
+.testimonial-box::before {
+  content: "“";
+  font-size: 6rem;
+  color: #acded8;
+  position: absolute;
+  top: -3rem;
+  left: 2rem;
+}
+
+/* Texto */
 .testimonial-quote {
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   color: #374151;
-  font-style: normal;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 2rem;
 }
 
+/* Rodapé com foto, nome e cargo */
 .testimonial-footer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  position: absolute;
+  bottom: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
-.company-logo {
-  width: 48px;
-  height: 48px;
+.testimonial-footer img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid #fff;
   object-fit: cover;
+  background: #eee;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-client-name,
+.testimonial-company {
+  margin: 0;
 }
 
 .testimonial-client-name {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: #1f2937;
-  margin: 0;
+  color: #0f1f37;
 }
 
 .testimonial-company {
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
   color: #6b7280;
-  margin: 0;
 }
 
 /* Estilo para as bolinhas flutuantes */
@@ -120,55 +131,40 @@
   transition: background-color 0.3s ease;
 }
 
-.floating-shape.shape-1 {
-  background-color: #d5e0f1; /* Amarelo suave */
-}
+/* Cores de cada bolinha */
+.floating-shape.shape-1 { background-color: #add9c7; }
+.floating-shape.shape-2 { background-color: #add9c7; }
+.floating-shape.shape-3 { background-color: #add9c7; }
+.floating-shape.shape-4 { background-color: #add9c7; }
 
-.floating-shape.shape-2 {
-  background-color: #d5e0f1; /* Verde suave */
-}
+/* Ícones */
+.floating-shape i { font-size: 1.5rem; }
 
-.floating-shape.shape-3 {
-  background-color: #d5e0f1; /* Roxo suave */
-}
-
-.floating-shape.shape-4 {
-  background-color: #d5e0f1; /* Rosa suave */
-}
-
-/* Estilo para os ícones dentro das bolinhas */
-.floating-shape i {
-  color: white;
-  font-size: 1.5rem;
-}
-
-/* Animação das bolinhas */
+/* Animação */
 @keyframes moveBlob {
-  0%, 100% {
-    transform: translateY(0);
+  0%, 100% { transform: translateY(0); }
+  50%     { transform: translateY(-15px); }
+}
+
+/* Posições */
+.floating-shape.shape-1 { top: 5%;   left: 25%; }
+.floating-shape.shape-2 { top: 25%;  left: 75%; }
+.floating-shape.shape-3 { top: 70%;  left: 18%; }
+.floating-shape.shape-4 { top: 70%;  left: 80%; }
+.feedback-section {
+  background-color: #f9fafb;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;   /* garante contexto para posicionamento */
+  overflow: hidden;     /* esconde tudo que ficar fora */
+}
+
+
+@media (max-width: 1024px) {
+  .floating-shape {
+    display: none;
+ 
   }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-/* Posições absolutas das bolinhas flutuantes */
-.floating-shape.shape-1 {
-  top: 5%;
-  left: 25%;
-}
-
-.floating-shape.shape-2 {
-  top: 25%;
-  left: 75%;
-}
-
-.floating-shape.shape-3 {
-  top: 70%;
-  left: 18%;
-}
-
-.floating-shape.shape-4 {
-  top: 70%;
-  left: 80%;
+ 
 }

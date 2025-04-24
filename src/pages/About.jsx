@@ -16,7 +16,7 @@ function About() {
         <div className="about-shapes"></div>
         <div className="about-content">
           <div className="about-text">
-            <h1>Sobre</h1>
+            <h1>Sobre nossos serviços</h1>
             <div className="divider"></div>
             <p>
               Serviços focados em desenvolvimento de <span className="highlight">MVPs</span>, <span className="highlight">landing pages</span> e soluções sob medida.

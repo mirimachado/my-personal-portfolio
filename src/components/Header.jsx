@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/header.css';
-import logo from '../assets/icons/medium.png'; // substitua pelo caminho correto da sua logo
+import logo from '../assets/icons/logo-m.png'; // substitua pelo caminho correto da sua logo
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -35,6 +35,11 @@ function Header() {
             <Link to="/about" className="mx-4 text-gray-700 hover:underline">Sobre</Link>
             <Link to="/contact" className="mx-4 text-gray-700 hover:underline">Contato</Link>
             <a href="#blog">Blog</a>
+            <div class="language-switcher">
+      <span class="flag" title="Português">🇧🇷</span>
+      <span class="flag" title="English">🇺🇸</span>
+    </div>
+    
 
         </nav>
       </div>

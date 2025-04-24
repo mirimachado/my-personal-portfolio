@@ -95,14 +95,11 @@ function HowItWorks() {
         </div>
 
         {/* Wrapper branco com blobs e cards */}
-        <div className="creative-showcase-wrapper">
-          {/* Blobs internos */}
+        {/* <div className="creative-showcase-wrapper">
           <div className="inner-blob" />
           <div className="inner-blob" />
 
-          {/* Container dos cards */}
           <div className="creative-showcase-container">
-            {/* Card FAQ dinâmico */}
             <div className="faq-item">
               <div className="creative-label">{label}</div>
               <h3 className="faq-question">{question}</h3>
@@ -112,7 +109,6 @@ function HowItWorks() {
               </div>
             </div>
 
-            {/* Card WHAT WE DO fixo */}
             <div className="faq-item">
               <div className="creative-label">O QUE FAZEMOS</div>
               <h3 className="faq-question">Onde criatividade encontra produtividade</h3>
@@ -125,7 +121,7 @@ function HowItWorks() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="floating-blob" /> {/* Blob ondulado principal */}

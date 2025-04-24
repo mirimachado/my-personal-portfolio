@@ -1,13 +1,11 @@
-/* src/styles/hero.css */
-
-body, html{
+body, html {
   overflow-x: hidden;
   margin: 0;
 }
 
 .hero-div {
   width: 100%;
-  height: 800px;
+  height: 700px;
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #ffae00, #7e28b8, #fdee17);
@@ -15,8 +13,6 @@ body, html{
   animation: gradientMove 10s ease infinite;
   overflow: hidden;
   position: relative;
-
-  
 }
 
 @keyframes gradientMove {
@@ -25,305 +21,200 @@ body, html{
   100% { background-position: 0% 50%; }
 }
 
-
-
 .hero-img-laptop {
-    position: absolute;
-    top: 340px;
-    left: 50%;
-    transform: translate(-110%, -50%);
-    height: 500px;
-    width: 625px;
-    background-image: url('/public/new-image-laptop.png'); 
-    background-size: cover;
-    color: #111827;
-    text-align: center;
-    z-index: 2;
-  }
+  position: absolute;
+  top: 340px;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  height: 550px;
+  width: 750px;
+  background-image: url('/public/new-image-laptop.png'); /* Aqui vai a imagem do laptop */
+  background-size: cover;
+  background-position: center;
+  color: #111827;
+  text-align: center;
+  z-index: 2;
+}
 
-  .video-inside-laptop {
-    position: absolute;
-    top: 350px;    
-    left: 50%;
-    transform: translate(-130.3%, -50%);
-    width: 390px;
-    height: 500px;
-    border-radius: 8px;
-    z-index: 5;
-  }
- 
+.laptop-screen-sub {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 57.9%;
+  height: 40%;
+  background-image: url('/public/note-img-sub.png'); /* A imagem que você quer colocar na tela do laptop */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .shadow-ellipse {
-    position: absolute;
-    left: 50%;
-    top: 516px;
-    transform: translate(-113%, -50%);
-    width: 500px;
-    height: 80px;
-    background: radial-gradient(ellipse at center, #1f0d426b 0%, transparent 70%);
-    filter: blur(2px);
-    z-index: 1;
-  }
+
+
+.hero-img-laptop .laptop-screen {
+  position: absolute;
+  top: 128px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 63%;
+  height: 40%;
+  background-image: url('/public/note-img.png'); /* A imagem que você quer colocar na tela do laptop */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   
-  .hero-content h2 {
-    position: absolute;
-    top: 250px;
-    left: 50%;
-    transform: translate(15%, -50%);
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: initial;
-    width: 30%;
-    font-family: Poppins, sans-serif;
-    font-weight: 500;
-    font-style: normal; 
-    color: #ffffff;
+}
 
-  }
-  
-  .hero-content p {
-    position: absolute;
-    top: 350px;
-    left: 50%;
-    transform: translate(15%, -50%);
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-    text-align: initial;
-    width: 30%;
-    font-family: Poppins, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: #ffffff;
-
-  }
-  
-  .cta-button {
-    position: absolute;
-    top: 480px;
-    left: 50%;
-    transform: translate(40%, -50%);
-    background-color: #64bdae;
-    color: rgb(238, 236, 236);
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    border-radius: 10px;
-    font-family: Poppins, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #ebebeb;
-    color: rgb(31, 30, 30);
-
-  }
-
-
-  .blob {
-    position: absolute;
-    z-index: 0;
-    opacity: 0.6;
-    pointer-events: none;
-    animation: pulse 4s ease-in-out infinite; /* Melhorar a animação */
-  }
-  
-  .blob-purple {
-    top: 250px;
-    left: 50%;
-    transform: translate(-220%, -50%); /* Posição inicial fixa */
-  }
-  
-  .blob-pink {
-    top: 380px;
-    left: 50%;
-    transform: translate(-100%, -50%); /* Posição inicial fixa */
-    animation-delay: 1s; /* Pequeno atraso para criar desincronização */
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1); /* Tamanho inicial */
-    }
-    50% {
-      transform: scale(1.2); /* Aumenta o tamanho para visibilidade */
-    }
-    100% {
-      transform: scale(1); /* Retorna ao tamanho original */
-    }
-  }
-
-
-  .hero-blob {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.6;
-    z-index: 0;
-  }
-  
-  .blob-1 {
-    width: 300px;
-    height: 300px;
-    background: #e2bf5f;
-    top: 500px;
-    transform: translate(-220%, -50%);
-
-  }
-  
-  .blob-2 {
-    width: 400px;
-    height: 400px;
-    background: #fa58ec;
-    top: 180px;
-    transform: translate(-270%, -50%);
-
-  }
-
- 
-  @media (max-width: 1578px) {
-
-    .hero-img-laptop {
-      position: absolute;
-      top: 340px;
-      left: 50%;
-      transform: translate(-95%, -50%);
-      height: 430px;
-      width: 600px;
-      background-image: url('/public/new-image-laptop.png'); 
-      background-size: cover;
-      color: #111827;
-      text-align: center;
-      z-index: 2;
-  
-  }
-
-  .video-inside-laptop {
-    position: absolute;
-    top: 348px;    
-    left: 50%;
-    transform: translate(-124.2%, -50%);
-    width: 334px;
-    height: 600px;
-    border-radius: 8px;
-    z-index: 5;
-  }
-
-  .shadow-ellipse{
-    display: none;
-  }
-
-    .hero-content h2 {
-      position: absolute;
-      top: 250px;
-      left: 50%;
-      transform: translate(15%, -50%);
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-align: initial;
-      width: 40%;
-      font-family: Poppins, sans-serif;
-      font-weight: 500;
-      font-style: normal; 
-      color: #ffffff;
-  
-    }
-    
-    .hero-content p {
-      position: absolute;
-      top: 370px;
-      left: 50%;
-      transform: translate(15%, -50%);
-      font-size: 0.9rem;
-      margin-bottom: 30px;
-      text-align: initial;
-      width: 40%;
-      font-family: Poppins, sans-serif;
-      font-weight: 300;
-      font-style: normal;
-      color: #ffffff;
-  
-    }
-    
-    .cta-button {
-      position: absolute;
-      top: 480px;
-      left: 50%;
-      transform: translate(30%, -50%);
-      background-color: #64bdae;
-      color: rgb(238, 236, 236);
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      border-radius: 10px;
-      font-family: Poppins, sans-serif;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    
-
-  
-  
-  }
-
-/* Desktops menores */
-@media (max-width: 1024px) {
-
-  .hero-img-laptop, .video-inside-laptop, .shadow-ellipse {
-    display: none;
-
+.shadow-ellipse {
+  position: absolute;
+  left: 50%;
+  top: 530px;
+  transform: translate(-125%, -50%);
+  width: 500px;
+  height: 90px;
+  background: radial-gradient(ellipse at center, #1f0d426b 0%, transparent 70%);
+  filter: blur(2px);
+  z-index: 1;
 }
 
 .hero-content h2 {
   position: absolute;
   top: 250px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(15%, -50%);
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
-  width: 50%;
+  text-align: initial;
+  width: 30%;
   font-family: Poppins, sans-serif;
   font-weight: 500;
   font-style: normal; 
   color: #ffffff;
-
 }
 
 .hero-content p {
   position: absolute;
-  top: 530px;
+  top: 350px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  text-align: center;
-  
-
+  transform: translate(15%, -50%);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  text-align: initial;
+  width: 30%;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff;
 }
 
 .cta-button {
   position: absolute;
-  top: 680px;
+  top: 495px;
+  left: 50%;
+  transform: translate(42%, -50%);
+  background-color: #64bdae;
+  color: rgb(238, 236, 236);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  font-family: Poppins, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ebebeb;
+  color: rgb(31, 30, 30);
+}
+
+.blob {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.blob-purple {
+  top: 250px;
+  left: 50%;
+  transform: translate(-220%, -50%);
+}
+
+.blob-pink {
+  top: 380px;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-blob {
+  position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
- 
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: 0;
 }
 
-
-
-
+.blob-1 {
+  width: 300px;
+  height: 300px;
+  background: #e2bf5f;
+  top: 500px;
+  transform: translate(-220%, -50%);
 }
 
-  
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: #fa58ec;
+  top: 180px;
+  transform: translate(-270%, -50%);
+}
 
-  
+@media (max-width: 1578px) {
+  .hero-img-laptop {
+    position: absolute;
+    top: 340px;
+    left: 50%;
+    transform: translate(-95%, -50%);
+    height: 430px;
+    width: 600px;
+    background-image: url('/public/new-image-laptop.png');
+    background-size: cover;
+    background-position: center;
+    color: #111827;
+    text-align: center;
+    z-index: 2;
+  }
 
+  .hero-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
 
-  
-  
-  
-  
+  .hero-content p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    top: 470px;
+    font-size: 0.85rem;
+  }
+}

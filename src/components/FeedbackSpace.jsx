@@ -1,31 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/feedback-space.css';
-import techlinkerLogo from '../assets/icons/figma.png';
-import miliLogo from '../assets/icons/figma.png';
+import techlinkerLogo from '../assets/icons/rafael-logo.png';
+import miliLogo from '../assets/icons/camile-logo.png';
 
 const testimonials = [
   {
     quote: '“Ficou muito bom mesmo, gostei bastante das cores e do formato limpo para navegação. Ficou show, gostamos bastante.”',
     name: 'Rafael Caldas',
     company: 'TechLinker',
-    logo: techlinkerLogo,
+    photo: techlinkerLogo,
   },
   {
     quote: '“Caraca, que lindo! Você arrasou no design, amei de verdade. Fiquei impressionada!”',
     name: 'Camile Santiago',
     company: 'Mili Fotografias',
-    logo: miliLogo,
+    photo: miliLogo,
   },
 ];
 
-function FeedBackSpace() {
+export default function FeedBackSpace() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      setCurrentIndex(prev => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -38,22 +37,16 @@ function FeedBackSpace() {
         </p>
 
         <div className="carousel-wrapper">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((t, idx) => (
             <div
-              className={`testimonial-box ${index === currentIndex ? 'active' : ''}`}
-              key={index}
+              key={idx}
+              className={`testimonial-box ${idx === currentIndex ? 'active' : ''}`}
             >
-              <p className="testimonial-quote">{testimonial.quote}</p>
+              <p className="testimonial-quote">{t.quote}</p>
               <div className="testimonial-footer">
-                <img
-                  src={testimonial.logo}
-                  alt={`Logo da ${testimonial.company}`}
-                  className="company-logo"
-                />
-                <div>
-                  <p className="testimonial-client-name">{testimonial.name}</p>
-                  <p className="testimonial-company">{testimonial.company}</p>
-                </div>
+                <img src={t.photo} alt={t.name} />
+                <p className="testimonial-client-name">{t.name}</p>
+                <p className="testimonial-company">{t.company}</p>
               </div>
             </div>
           ))}
@@ -76,5 +69,3 @@ function FeedBackSpace() {
     </section>
   );
 }
-
-export default FeedBackSpace;

@@ -16,8 +16,9 @@ body, input, button, textarea {
 .about-hero {
   position: relative;
   background: var(--color-bg-hero);
-  padding: 6rem 1rem;
+  padding: 8.8rem 1rem;
   overflow: hidden;
+  
 }
 
 .about-shapes::before,
@@ -71,7 +72,7 @@ body, input, button, textarea {
 
 .about-text {
   flex: 1;               /* Ocupa o espaço disponível */
-  max-width: 400px;      /* Limita largura do texto */
+  max-width: 500px;      /* Limita largura do texto */
   text-align: left;      /* Alinha o texto à esquerda */
 }
 
@@ -85,9 +86,9 @@ body, input, button, textarea {
 .divider {
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg,#6c63ff,#00dbde);
+  background: linear-gradient(90deg,#88d1e1,#489ab1);
   margin: 1rem 0 2rem 0;  /* Ajusta margens para manter alinhamento */
-  animation: slide 2s infinite alternate;
+  /* animation: slide 2s infinite alternate; */
 }
 
 @keyframes slide {

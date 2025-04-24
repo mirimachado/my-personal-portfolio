@@ -4,16 +4,24 @@ import '../styles/services.css';
 function Services() {
   return (
     <div className="services">
-      <h2 className="services-title">O que oferecemos</h2>
-      <p className="services-subtitle">
-        Soluções digitais sob medida para destacar sua marca no mundo digital. 
-        Transformamos ideias em experiências, com design moderno, performance e tecnologia sob demanda.
-      </p>
+      <div className="services-texts-wrapper">
+        <div className="services-left">
+          <h2 className="services-title">O que oferecemos</h2>
+          <p className="services-subtitle">
+            Soluções digitais sob medida para destacar sua marca no mundo digital.
+            Transformamos ideias em experiências, com design moderno, performance e tecnologia sob demanda.
+          </p>
+        </div>
 
-      <p className="services-description">
-        Seja uma landing page de alta conversão, um sistema exclusivo para seu negócio ou aquele MVP para testar sua ideia no mercado, 
-        temos a solução ideal para você. Vamos tirar seu projeto do papel?
-      </p>
+        <div className="divider-service" />
+
+        <div className="services-right">
+          <p className="services-description">
+            Seja uma landing page de alta conversão, um sistema exclusivo para seu negócio ou aquele MVP para testar sua ideia no mercado,
+            temos a solução ideal para você. Vamos tirar seu projeto do papel?
+          </p>
+        </div>
+      </div>
 
       <div className="container-services-blocks">
 
@@ -27,7 +35,7 @@ function Services() {
           </div>
           <h3>Landing Pages Personalizadas</h3>
           <p>
-            Desenvolvemos landing pages sob medida com foco total em conversão. Com design moderno, responsivo e otimizado para performance, 
+            Desenvolvemos landing pages sob medida com foco total em conversão. Com design moderno, responsivo e otimizado para performance,
             essas páginas são ideais para campanhas de marketing, lançamentos de produtos ou captura de leads.
           </p>
         </div>

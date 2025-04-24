@@ -1,9 +1,14 @@
 import React from 'react';
 import '../styles/footer.css';
-
+import logo from '../assets/icons/logo-m.png'; // substitua pelo caminho correto da sua logo
 function Footer() {
   return (
     <footer className="footer">
+      {/* Logo no topo, centralizada */}
+      <div className="footer-logo">
+        <img src={logo} alt="Logo da Miriã Machado" />
+      </div>
+
       <div className="footer-container">
         {/* Coluna 1: Sobre */}
         <div className="footer-column">
@@ -27,8 +32,8 @@ function Footer() {
         {/* Coluna 3: Contato */}
         <div className="footer-column">
           <h3>Contato</h3>
-          <p>Email: <a href="mailto:seuemail@exemplo.com">miria.machado.dev@gmail.com</a></p>
-          <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">(51) 99766-5096</a></p>
+          <p>Email: <a href="mailto:miria.machado.dev@gmail.com">miria.machado.dev@gmail.com</a></p>
+          <p>WhatsApp: <a href="https://wa.me/55119997665096" target="_blank" rel="noopener noreferrer">(51) 99766-5096</a></p>
         </div>
 
         {/* Coluna 4: Redes Sociais */}
