@@ -1,11 +1,14 @@
-Miri Machado Dev — Site 
+## Miri Machado Dev — Site 
 
-Bem-vindo ao repositório do meu site pessoal mirimachadodev.com!
-Aqui você pode conhecer mais sobre mim, meus serviços como desenvolvedora e como entrar em contato para projetos.
-- Sobre
+Este repositório contém o código-fonte do site mirimachadodev.com, criado para apresentar os serviços oferecidos como 
+desenvolvedora web, além de fornecer um canal direto de contato com clientes e parceiros.
 
-Sou Miri Machado, desenvolvedora especializada em criar soluções modernas, acessíveis e eficientes para web. Este site foi criado com o objetivo de apresentar meus serviços, portfólio e facilitar o contato com possíveis clientes e parceiros.
-- Funcionalidades
+## - Sobre
+
+Sou desenvolvedora especializada em criar soluções modernas, acessíveis e eficientes para web.
+Este site foi criado com o objetivo de apresentar meus serviços, portfólio e facilitar o contato com possíveis clientes e parceiros.
+
+## - Funcionalidades
 
     Página inicial com apresentação e especialidades
 
@@ -19,7 +22,7 @@ Sou Miri Machado, desenvolvedora especializada em criar soluções modernas, ace
 
     Acessível e com foco na experiência do usuário
 
-- Tecnologias utilizadas
+## - Tecnologias utilizadas
 
     Frontend: HTML, CSS, JavaScript, React (ou framework usado)
 
@@ -29,15 +32,9 @@ Sou Miri Machado, desenvolvedora especializada em criar soluções modernas, ace
 
     Caso queira compartilhar detalhes técnicos do deploy ou estrutura de pastas, posso te ajudar a incluir também.
 
-- Contato
+## - Link
 
-Entre em contato diretamente pelo site ou através das redes sociais:
-
-    LinkedIn
-
-    Email
-
-    Instagram
+    https://mirimachadodev.com/
 
 
 
